@@ -52,3 +52,44 @@ When adding a character, universe, creature, mechanic, system or asset, update i
 You may propose new ideas, characters, mechanics, universes and improvements. However, distinguish proposals from approved canon. Never change established story facts or the approved visual identity without approval from the project owner.
 
 The goal is to build a distinctive, expansive, emotionally engaging and technically efficient game. Quality, consistency and meaningful exploration take priority over generating large quantities of disconnected content.
+
+---
+
+# OPERATING SUPPLEMENT
+## 11. REPOSITORY MAP
+Use this map to place new work in the correct location. Every directory contains a local `README.md` with specifics.
+
+| Path | Contents |
+|---|---|
+| `/` | Core documentation: README, PROJECT_BIBLE, GAME_DESIGN_DOCUMENT, ART_BIBLE, TECHNICAL_ARCHITECTURE, CONTRIBUTING, ROADMAP, CHANGELOG |
+| `/.github/` | Pull request template, CODEOWNERS |
+| `/assets/` | All artwork, audio, fonts, reference material and the central `ASSET_MANIFEST.json` + `ASSET_INDEX.md` |
+| `/assets/concept-art/` | Non-production concept work |
+| `/assets/production/` | Game-ready sprites, animations, tilesets, UI |
+| `/assets/audio/` | Music and sound effects |
+| `/docs/` | Extended guides and role-specific instructions |
+| `/game/` | The Godot 4 project (not yet initialised — see ROADMAP.md) |
+| `/qa/` | Test plans and bug reports |
+| `/tools/` | Automation and pipeline scripts |
+
+## 12. ROLE-SPECIFIC INSTRUCTIONS
+Before starting scoped work, read the guide matching your role **in addition to** these master instructions:
+
+| Role | Guide |
+|---|---|
+| Artist (general) | [docs/roles/ARTIST_GUIDE.md](docs/roles/ARTIST_GUIDE.md) |
+| Character designer | [docs/roles/CHARACTER_DESIGN_GUIDE.md](docs/roles/CHARACTER_DESIGN_GUIDE.md) |
+| Environment designer | [docs/roles/ENVIRONMENT_DESIGN_GUIDE.md](docs/roles/ENVIRONMENT_DESIGN_GUIDE.md) |
+| Gameplay programmer | [docs/roles/GAMEPLAY_PROGRAMMER_GUIDE.md](docs/roles/GAMEPLAY_PROGRAMMER_GUIDE.md) |
+| QA agent | [docs/roles/QA_GUIDE.md](docs/roles/QA_GUIDE.md) |
+
+Assets of any kind additionally follow [assets/ASSET_SUBMISSION_GUIDE.md](assets/ASSET_SUBMISSION_GUIDE.md) and [assets/NAMING_CONVENTIONS.md](assets/NAMING_CONVENTIONS.md).
+
+## 13. WORKFLOW QUICK REFERENCE
+The full workflow lives in [CONTRIBUTING.md](CONTRIBUTING.md). Non-negotiables:
+
+1. Never commit directly to `main`. Use a dedicated branch (`feature/…`, `art/…`, `docs/…`, `fix/…`, `qa/…`, or an assigned agent branch) and open a pull request.
+2. Never silently delete, rename or overwrite existing work — especially anything marked `approved-master`.
+3. Mark creative additions as **PROPOSAL** until the project owner approves them as canon (rule 10).
+4. Update documentation and manifests in the same change that introduces the thing they describe (rule 9).
+5. Report validation results honestly; never claim untested work is tested (rule 8).

@@ -1,0 +1,46 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "ENDWORLDS: THE LONG WAY HOME",
+  "repository": "mayamiko02/endworlds-the-long-way-home",
+  "last_updated": "2026-11-11",
+  "description": "Central registry for every project asset. Initialised empty: no assets have been imported yet. Companion human-readable view: ASSET_INDEX.md. Submission process: ASSET_SUBMISSION_GUIDE.md.",
+  "id_format": "ELWH-<CATEGORY>-<NNNN>  (e.g. ELWH-CHR-0001). IDs are unique and never reused, even if an asset is rejected or deprecated.",
+  "categories": {
+    "CON": "Concept art (characters, environments, UI exploration)",
+    "CHR": "Production character sprites",
+    "CRE": "Creature and enemy sprites",
+    "ENV": "Production environment art and backgrounds",
+    "TIL": "Tilesets",
+    "ITM": "Items, equipment and crafting materials",
+    "UI": "Production user-interface art",
+    "ANM": "Animation frames and animation clips",
+    "MUS": "Music tracks",
+    "SFX": "Sound effects",
+    "FNT": "Fonts",
+    "REF": "Reference material (owner-supplied; never ships in game)"
+  },
+  "status_lifecycle": {
+    "proposed": "Submitted for consideration. Not canon, not usable in production.",
+    "in-review": "Under active review by the project owner or delegated reviewer.",
+    "changes-requested": "Reviewed; revisions required before re-review.",
+    "approved": "Accepted for use. May still receive new versions.",
+    "approved-master": "Locked master asset. NEVER overwrite without explicit owner authorisation (AGENTS.md rule 6).",
+    "rejected": "Not accepted. Kept on record only if the owner requests retention.",
+    "deprecated": "Formerly approved, now superseded by a newer asset ID."
+  },
+  "entry_schema": {
+    "id": "ELWH-<CATEGORY>-<NNNN>",
+    "title": "Human-readable asset title",
+    "category": "One of the category codes in 'categories'",
+    "status": "One of the keys in 'status_lifecycle'",
+    "file": "Path to the primary file, relative to repository root",
+    "source_files": "Array of paths to preserved originals (PSD/KRA/Aseprite/WAV…), [] if none",
+    "author_or_source": "Creator name, toolchain honestly disclosed, or external source URL",
+    "license": "Licence/usage terms for externally sourced material, else 'project-owned'",
+    "submitted": "Submission date, ISO 8601 (YYYY-MM-DD)",
+    "approved": "Approval date or null",
+    "dimensions": "e.g. '2048x2048' or null when not applicable",
+    "notes": "Pivots, frame counts, palette scripts, related asset IDs, validation results"
+  },
+  "assets": []
+}

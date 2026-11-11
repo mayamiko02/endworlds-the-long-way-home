@@ -1,12 +1,23 @@
-# Godot 4.2+ specific ignores
+# =============================================================================
+# ENDWORLDS: THE LONG WAY HOME — .gitignore
+# Generated files that must NOT be committed (documented in CONTRIBUTING.md §7).
+# Additions must keep this file self-documenting: say WHY a rule exists.
+# =============================================================================
+
+# --- Godot 4.2+ specific ignores (original rules — preserved) -----------------
 ~*.dll
 
-# Godot 4+ specific ignores
+# --- Godot 4+ specific ignores (original rules — preserved) -------------------
+# .godot/ holds the editor's generated cache: imported textures, global script
+# class cache, uid cache. Regenerated locally on first open — never commit.
 .godot/
 .nomedia
 
-# Godot-specific ignores
+# --- Godot-specific ignores (original rules — preserved) ----------------------
+# .import/ is the Godot 3-style import cache (kept for forwards/backwards safety).
 .import/
+# export.cfg/export_credentials.cfg are local export presets and can contain
+# keystore paths and passwords — credentials must never reach Git.
 export.cfg
 export_credentials.cfg
 *.tmp
@@ -14,12 +25,43 @@ export_credentials.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
-# Mono-specific ignores
+# --- Mono-specific ignores (original rules — preserved) -----------------------
 .mono/
 data_*/
 mono_crash.*.json
 
-# Export outputs
+# --- Export outputs (original rule + extension) -------------------------------
+# Built binaries belong in Releases/external storage, not in the repository.
 *.exe
 # Uncomment if your project does not version PCK files as runtime dependencies.
 # *.pck
+*.apk
+*.aab
+*.ipa
+*.dmg
+# Local export staging directory used by CI/Release scripts when added.
+builds/
+
+# --- Operating system noise ----------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors & IDEs ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Tooling caches (tools/ pipelines) -----------------------------------------
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+
+# =============================================================================
+# Rule of thumb: if Godot, the OS or a tool regenerates it, it does not belong
+# in Git. Original asset sources (PSD/KRA/Aseprite/WAV masters) DO belong here —
+# they are originals the asset manifest is required to preserve (AGENTS.md §6).
+# =============================================================================
