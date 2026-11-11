@@ -1,0 +1,13 @@
+# ENDWORLDS: THE LONG WAY HOME — code ownership
+# The project owner reviews everything by default; canon files strictly require owner approval.
+# NOTE: owner handle assumed to be mayamiko02 (repository owner). Confirm or correct if wrong.
+
+# Default owner for everything
+*                                   @mayamiko02
+
+# Canon & governance — owner approval mandatory
+/AGENTS.md                          @mayamiko02
+/PROJECT_BIBLE.md                   @mayamiko02
+/ART_BIBLE.md                       @mayamiko02
+/GAME_DESIGN_DOCUMENT.md            @mayamiko02
+/assets/ASSET_MANIFEST.json         @mayamiko02
